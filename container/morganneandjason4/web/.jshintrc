@@ -1,4 +1,5 @@
 {
+  "node": true,
   "browser": true,
   "esnext": true,
   "bitwise": true,
@@ -8,11 +9,16 @@
   "immed": true,
   "indent": 2,
   "latedef": true,
-  "newcap": true,
   "noarg": true,
   "quotmark": "single",
   "undef": true,
   "unused": true,
   "strict": true,
-  "jquery": true
+  "jquery": true,
+  "globals": {
+    "wrap": true,
+    "unwrap": true,
+    "Polymer": true,
+    "Platform": true
+  }
 }

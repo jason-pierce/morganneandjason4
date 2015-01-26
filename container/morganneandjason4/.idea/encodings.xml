@@ -2,7 +2,11 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/bower_components/core-header-panel/core-header-panel.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/bower_components/core-toolbar/core-toolbar.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/elements/elements.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/styles/main.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/styles/main.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/bower.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/gulpfile.js" charset="UTF-8" />
