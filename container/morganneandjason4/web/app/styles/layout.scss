@@ -1,0 +1,118 @@
+/*------ dependencies -------*/
+@import "color-variables";
+@import "../fonts/fonts";
+
+/*----------- fonts ----------*/
+$dropcap: 'romantik';
+$mainFont: 'RobotoDraft';
+
+/*----------- header ---------*/
+core-scroll-header-panel::shadow #headerBg {
+  background-image: url('header-bg.jpg');
+}
+
+core-scroll-header-panel::shadow #condensedHeaderBg {
+  background-color: $emerald-green;
+}
+
+core-toolbar#mainheader{
+  background-color: transparent;
+  -moz-background-color: $emerald-green;
+  #navicon {
+    color: #fff;
+  }
+  .top {
+    color: #fff;
+  }
+  paper-tabs.blue::shadow #selectionBar {
+    background-color: $royal-blue;
+  }
+  paper-tabs.blue paper-tab::shadow #ink {
+    color: $royal-blue;
+  }
+  paper-tabs.green::shadow #selectionBar {
+    background-color: $eg-lightest;
+  }
+  paper-tabs.green paper-tab::shadow #ink {
+    color: $eg-light;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+  }
+}
+
+/*--- drawer panel & overall BG ---*/
+#drawerPanel {
+  ::shadow #mainContainer {
+    background-color: $rb-lightest;
+    color: #fff;
+  }
+  core-toolbar#navheader {
+    background-color: $royal-blue;
+    color: white;
+    core-menu {
+      core-item.bottom-border {
+        border-bottom: 1px solid #444;
+      }
+    }
+  }
+}
+
+
+/*--------- content ---------*/
+.content {
+  margin: 0 auto;
+  max-width: 950px;
+  background-color: white;
+  color: #222;
+  font-family: $mainFont;
+}
+
+.title {
+  padding-top: 1em;
+  h1:first-child:first-letter {
+    float: left;
+    color: $eg-dark;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-left: 20px;
+    font-family: $dropcap;
+  }
+}
+
+.content p{
+  padding: 0.8em 1.6em;
+}
+
+/*--------- footer ---------*/
+.footer {
+  width: 100%;
+  height: 480px;
+  @media screen and (min-width: 481px){
+    height: 780px;
+  }
+  margin: 30px auto 0;
+  padding-top: 30px;
+  background-color: $eg-dark;
+  font-family: $mainFont;
+  .subfooter {
+    background-color: $eg-darkest;
+    .sub-title{
+      float: left;
+      margin: 1em auto 1em 8%;
+      font-size: 2em;
+    }
+    .sub-social {
+      float: right;
+      font-size: 2.6em;
+      margin: 0.75em 8% 0.75em auto;
+      i {
+        padding: 0 10px;
+      }
+    }
+  }
+}

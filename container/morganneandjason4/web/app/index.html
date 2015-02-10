@@ -7,10 +7,6 @@
     <title>web</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild-->
-
     <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     <!-- endbuild -->
@@ -18,41 +14,171 @@
     <!-- build:vulcanized elements/elements.vulcanized.html -->
     <link rel="import" href="elements/elements.html">
     <!-- endbuild-->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild-->
+
   </head>
-  <body fullbleed>
-    <core-header-panel mode="waterfall-tall">
-      <core-toolbar>
-        <paper-icon-button icon="menu"></paper-icon-button>
-        <div>Morganne&amp;Jason4Life</div>
-        <span flex></span>
-        <paper-menu-button>
-          <paper-icon-button icon="more-vert"></paper-icon-button>
-          <paper-dropdown class="dropdown"
-                          halign="right">
-            <core-menu class="menu">
-              <paper-item>My RSVP</paper-item>
-              <paper-item>Settings</paper-item>
+  <body fullbleed layout vertical>
 
-            </core-menu>
+    <core-drawer-panel id="drawerPanel" forceNarrow>
 
-          </paper-dropdown>
-        </paper-menu-button>
-      </core-toolbar>
-      <div class="content">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        </p>
-        <p>
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p>
-      </div>
-    </core-header-panel>
+      <core-header-panel drawer>
+        <core-toolbar id="navheader">
+          <span>Menu</span>
+        </core-toolbar>
+        <core-menu>
+          <core-item label="RSVP"></core-item>
+          <core-item label="Ceremony"></core-item>
+          <core-item label="Reception"></core-item>
+          <core-item label="Accommodations"></core-item>
+          <core-item label="Registry"></core-item>
+          <core-item label="Pictures"></core-item>
+        </core-menu>
+      </core-header-panel>
+
+      <core-media-query id="mquery" query="max-width: 767px"></core-media-query>
+
+      <core-scroll-header-panel main condenses keepcondensedheader headerHeight="263" condensedHeaderHeight="64" flex>
+        <core-toolbar class="tall" id="mainheader">
+          <paper-icon-button id="navicon" icon="menu" core-drawer-toggle></paper-icon-button>
+          <div class="top">MorganneAndJason4Life</div>
+          <div class="bottom fit">
+            <paper-tabs class="green" horizontal center layout link>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>RSVP</a>
+              </paper-tab>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>Ceremony</a>
+              </paper-tab>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>Reception</a>
+              </paper-tab>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>Accomodations</a>
+              </paper-tab>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>Registry</a>
+              </paper-tab>
+              <paper-tab>
+                <a href="#link1" horizontal center-center layout>Pictures</a>
+              </paper-tab>
+            </paper-tabs>
+          </div>
+        </core-toolbar>
+
+        <div class="content">
+          <paper-shadow id="content-large" hidden horizontal layout z="2">
+            <div flex five>
+              <div class="title">
+                <h1>Our Story</h1>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate. Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit. Aenean mauris elit, pretium non risus sit amet, pharetra viverra est. Aliquam tellus magna, tempus at fringilla non, lacinia id metus.
+              </p>
+              <p>
+                Nulla nec ante consectetur, malesuada nulla sit amet, congue turpis. Nam vitae tempus augue. Quisque varius porttitor tempus. Pellentesque dapibus, mi in ultrices laoreet, massa sem feugiat magna, eget vestibulum turpis lectus et dolor. Aliquam ut ipsum velit. Suspendisse sed tempor lectus. Nunc id fringilla nisi. In tincidunt cursus lacus ornare blandit. Morbi nec augue in urna interdum blandit non id ipsum. Vivamus quis ante non felis finibus hendrerit. Duis ut porttitor lacus. Mauris ac turpis ut sem molestie malesuada non non odio.
+              </p>
+              <p>
+                Quisque semper nibh elementum metus rutrum, ut tincidunt dolor volutpat. Nullam commodo sem quis orci dignissim volutpat. In pharetra a dolor consectetur lacinia. Aenean tristique lacus quis fermentum finibus. Proin ipsum est, dapibus id dui sit amet, elementum fringilla sem. Cras porta urna vitae tincidunt pellentesque. Fusce consectetur auctor ultricies. Maecenas et malesuada orci. Vivamus tempor malesuada nibh, vel pretium neque faucibus et. Proin euismod, est sit amet facilisis lobortis, orci arcu consequat mauris, eget ullamcorper mi nunc nec nulla. Aliquam laoreet justo vitae luctus finibus. Integer hendrerit maximus ex non hendrerit. Maecenas egestas id justo eget tristique.
+              </p>
+              <p>
+                Pellentesque vitae accumsan dolor, quis mattis sapien. In id erat nibh. Donec pellentesque nunc odio. Ut porta mi at molestie sodales. Morbi vel fermentum turpis. Vestibulum ornare urna ex. Aenean lobortis ultricies ligula quis tincidunt. Maecenas molestie, arcu semper suscipit lacinia, urna lorem luctus ex, scelerisque viverra sapien ipsum ut nunc.
+              </p>
+            </div>
+            <div flex three>
+              <p>
+                Aliquam erat volutpat. Sed sit amet nunc imperdiet, sodales magna quis, dapibus mauris. Ut ut facilisis tortor, vel volutpat felis. Pellentesque et dolor congue, pellentesque orci eget, volutpat sem. Aenean volutpat augue dolor, non mollis purus dictum a. Suspendisse mauris augue, volutpat et molestie tempor, sollicitudin feugiat nulla. Nam volutpat eget elit ut suscipit. Nulla lorem ante, pellentesque vitae leo eget, pharetra dictum nulla. Quisque eget efficitur lacus, at vestibulum libero. Aliquam ullamcorper elit metus, vel faucibus velit blandit vitae. Vivamus lacinia augue quis magna lacinia, quis finibus lacus egestas. Proin metus lectus, consectetur nec porta nec, vestibulum sit amet arcu.
+              </p>
+            </div>
+          </paper-shadow>
+          <paper-shadow id="content-small" vertical layout z="2">
+            <div flex five>
+              <div class="title">
+                <h1>Our Story</h1>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate. Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit. Aenean mauris elit, pretium non risus sit amet, pharetra viverra est. Aliquam tellus magna, tempus at fringilla non, lacinia id metus.
+              </p>
+              <p>
+                Nulla nec ante consectetur, malesuada nulla sit amet, congue turpis. Nam vitae tempus augue. Quisque varius porttitor tempus. Pellentesque dapibus, mi in ultrices laoreet, massa sem feugiat magna, eget vestibulum turpis lectus et dolor. Aliquam ut ipsum velit. Suspendisse sed tempor lectus. Nunc id fringilla nisi. In tincidunt cursus lacus ornare blandit. Morbi nec augue in urna interdum blandit non id ipsum. Vivamus quis ante non felis finibus hendrerit. Duis ut porttitor lacus. Mauris ac turpis ut sem molestie malesuada non non odio.
+              </p>
+              <p>
+                Quisque semper nibh elementum metus rutrum, ut tincidunt dolor volutpat. Nullam commodo sem quis orci dignissim volutpat. In pharetra a dolor consectetur lacinia. Aenean tristique lacus quis fermentum finibus. Proin ipsum est, dapibus id dui sit amet, elementum fringilla sem. Cras porta urna vitae tincidunt pellentesque. Fusce consectetur auctor ultricies. Maecenas et malesuada orci. Vivamus tempor malesuada nibh, vel pretium neque faucibus et. Proin euismod, est sit amet facilisis lobortis, orci arcu consequat mauris, eget ullamcorper mi nunc nec nulla. Aliquam laoreet justo vitae luctus finibus. Integer hendrerit maximus ex non hendrerit. Maecenas egestas id justo eget tristique.
+              </p>
+              <p>
+                Pellentesque vitae accumsan dolor, quis mattis sapien. In id erat nibh. Donec pellentesque nunc odio. Ut porta mi at molestie sodales. Morbi vel fermentum turpis. Vestibulum ornare urna ex. Aenean lobortis ultricies ligula quis tincidunt. Maecenas molestie, arcu semper suscipit lacinia, urna lorem luctus ex, scelerisque viverra sapien ipsum ut nunc.
+              </p>
+            </div>
+            <div flex three>
+              <p>
+                Aliquam erat volutpat. Sed sit amet nunc imperdiet, sodales magna quis, dapibus mauris. Ut ut facilisis tortor, vel volutpat felis. Pellentesque et dolor congue, pellentesque orci eget, volutpat sem. Aenean volutpat augue dolor, non mollis purus dictum a. Suspendisse mauris augue, volutpat et molestie tempor, sollicitudin feugiat nulla. Nam volutpat eget elit ut suscipit. Nulla lorem ante, pellentesque vitae leo eget, pharetra dictum nulla. Quisque eget efficitur lacus, at vestibulum libero. Aliquam ullamcorper elit metus, vel faucibus velit blandit vitae. Vivamus lacinia augue quis magna lacinia, quis finibus lacus egestas. Proin metus lectus, consectetur nec porta nec, vestibulum sit amet arcu.
+              </p>
+            </div>
+          </paper-shadow>
+        </div>
+
+        <div class="footer" id="footerLarge" vertical layout>
+            <div horizontal center-justified layout flex three>
+              <img src="images/floral-pattern.png" alt=""/>
+            </div>
+            <div flex five>
+              <div horizontal layout>
+                <div flex three self-center>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit
+                    ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate.
+                    Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae
+                    laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea
+                    dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit.
+                  </p>
+                </div>
+                <div flex five self-center>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit
+                    ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate.
+                    Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae
+                    laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea
+                    dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit.
+                  </p>
+                </div>
+              </div>
+              <div horizontal layout>
+                <div flex five self-center>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit
+                    ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate.
+                    Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae
+                    laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea
+                    dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit.
+                  </p>
+                </div>
+                <div flex three self-center>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis dictum mauris, eget suscipit
+                    ipsum aliquam nec. Vestibulum interdum lectus vitae ex vehicula, bibendum viverra ipsum vulputate.
+                    Pellentesque ultricies sapien felis, ut facilisis lorem rutrum sed. Nam tempus, justo vitae
+                    laoreet suscipit, augue tellus luctus sapien, ut faucibus risus enim ut nisi. In hac habitasse platea
+                    dictumst. Morbi dapibus cursus massa a faucibus. Fusce ornare vehicula metus non suscipit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="subfooter">
+              <span class="sub-title">This Site Was Built by Jason Pierce using Polymer</span>
+              <span class="sub-social">
+                <i class="fa fa-github"></i>
+                <i class="fa fa-linkedin-square"></i>
+                <i class="fa fa-twitter-square"></i>
+              </span>
+            </div>
+        </div>
+
+      </core-scroll-header-panel>
+    </core-drawer-panel>
+
 
     <!-- build:js scripts/app.js -->
     <script src="scripts/app.js"></script>

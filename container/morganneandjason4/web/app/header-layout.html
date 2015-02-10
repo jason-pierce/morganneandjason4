@@ -1,0 +1,37 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<polymer-element name="header-layout" attributes="selected">
+  <template>
+    <header>
+      <core-scaffold>
+      <div class="header core-header">
+        <core-toolbar class="waterfall tall">
+          <div class="top indent">Top Title</div>
+          <div class="middle indent">Middle Title</div>
+          <paper-tabs class="bottom fit" selected="{{selected}}" horizontal center layout link>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'rsvp'}}">
+              <a href="/#/rsvp">RSVP</a>
+            </paper-tab>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'ceremony'}}">
+              <a href="/#/ceremony">Ceremony</a>
+            </paper-tab>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'reception'}}">
+              <a href="/#/reception">Reception</a>
+            </paper-tab>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'accommodations'}}">
+              <a href="/#/accomodations">Accommodations</a>
+            </paper-tab>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'registry'}}">
+              <a href="/#/registry">Registry</a>
+            </paper-tab>
+            <paper-tab role="tab" inline flex center-center horizontal layout active?="{{selected == 'pictures'}}">
+              <a href="/#/pictures">Pictures</a>
+            </paper-tab>
+          </paper-tabs>
+        </core-toolbar>
+      </div>
+      </core-scaffold>
+    </header>
+    <content></content>
+  </template>
+</polymer-element>
